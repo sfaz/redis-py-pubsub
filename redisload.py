@@ -20,7 +20,6 @@ def make_request():
 start = time.localtime()
 print time.strftime("%H:%M:%S", start)
 for i in range(0, MAX/100):
-    #r.set(uuid.uuid4(),uuid.uuid4())
     t = Thread(target=make_request())
     t.start()
 
