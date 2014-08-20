@@ -11,4 +11,4 @@ To set this up there are 3 main components:
 3. redisubcriber.py - this is the subscriber to the redis publish commands if that option is used
 
 Note to get all the components run:
-pip install -r requirements.txt
+    pip install -r requirements.txt
