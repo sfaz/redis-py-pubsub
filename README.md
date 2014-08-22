@@ -1,7 +1,7 @@
 redis-py-pubsub
 ===============
 
-A small test of high volume redis based pub sub or incremental value storage.
+A small test of high volume redis based pub sub or incremental value storage. Testing on a Macbook Pro (i7) achieved a TPS of ~500 posts per second with this.
 
 The initial test case for this is a high volume polling solution where usings would simply vote for a value e.g. A,B,C,D,E etc and the values can either be summed directly in redis using the incr command or by using the subscriber function which then sums up the values in a Python Counter dict.
 
@@ -12,3 +12,4 @@ To set this up there are 3 main components:
 
 Note to get all the components run:
     pip install -r requirements.txt
+    

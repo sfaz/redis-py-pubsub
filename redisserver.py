@@ -16,11 +16,11 @@ def create():
     pipe = r.pipeline()
     key = uuid.uuid4()
     # To use the simple increment by option setup uncomment the next line
-    r.incr(request.form['option'])
+    #r.incr(request.form['option'])
     # For slightly better performance you can use only increment and drop the publish and set however this has better expandibility
-    #pipe.publish('test', data)
-    #pipe.set(key, data)
-    #pipe.execute()
+    pipe.publish('test', data)
+    pipe.set(key, data)
+    pipe.execute()
     return "OK"
 
 if __name__ == "__main__":
